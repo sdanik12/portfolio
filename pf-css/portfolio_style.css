@@ -1,0 +1,382 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Pretendard, "Montserrat", "Noto Sans KR", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+:root {
+  --font-size-lg: 7rem;
+  --font-size-md: 3.2rem;
+  --font-size-sm: 1.4rem;
+  word-spacing: 0.4rem;
+  --font-size-xs: 0.9rem;
+}
+/* ---------------------------------------------page1시작--------------------------------------- */
+.page1 {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+.page-color {
+  width: 100%;
+  height: 100vh;
+}
+.square {
+  position: relative;
+  margin: 0 auto;
+  top: 80px;
+  width: 150px;
+  height: 150px;
+}
+.square > div:not(:nth-child(4)) {
+  border: 1px solid #000;
+  border-radius: 36% 64% 54% 46% / 38% 28% 72% 62%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+}
+.square .one {
+  animation-duration: 6s;
+}
+.square .two {
+  animation-duration: 5s;
+  animation-direction: reverse;
+}
+.square .three {
+  animation-duration: 10s;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.square:hover .one {
+  animation: hover 1s forwards;
+}
+.square:hover .two {
+  animation: hover 2s forwards;
+}
+.square:hover .three {
+  animation: hover 2.5s forwards;
+}
+@keyframes hover {
+  to {
+    border-radius: 50%;
+    transform: rotateX(360deg);
+  }
+}
+.square a {
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #000;
+  visibility: hidden;
+}
+.square:hover a {
+  visibility: visible;
+}
+.page1 .page-color {
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+.page1 .text {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page1 .text .txt-hidden {
+  width: 100%;
+  overflow: hidden;
+}
+.page1 .text .main-text {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: var(--font-size-lg);
+  letter-spacing: -10px;
+  word-spacing: 20px;
+  line-height: 0.8em;
+  white-space: nowrap;
+  position: relative;
+}
+.page1 .text .main-text:first-of-type,
+.page1 .text .main-text:nth-of-type(5) {
+  animation: text-slide-1 12s linear infinite;
+}
+.page1 .text .main-text:nth-of-type(3) {
+  animation: text-slide-1 10s linear infinite;
+}
+.page1 .text .main-text:nth-of-type(2),
+.page1 .text .main-text:nth-of-type(4) {
+  animation: text-slide-1 8s linear infinite;
+}
+@keyframes text-slide-1 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 700px;
+  }
+}
+.page1 .text .main-text:hover {
+  animation-play-state: paused;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+/* ---------------------------------------page2시작------------------------------------------------ */
+.page2 {
+  width: 100%;
+}
+.page2 .page-color {
+  background: linear-gradient(to bottom, #009efd 0%, #ffe401 100%);
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 7%;
+  height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: var(--font-size-xs);
+}
+nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+nav ul li {
+  width: 100%;
+  height: 5%;
+}
+nav .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+nav .circle a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.page2 .inner {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page2 .inner section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.page2 .inner section .typo-box {
+  width: 60%;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #303030;
+  text-align: left;
+  margin: 0 35px;
+}
+.page2 .inner section .typo-box .intro {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.page2 .inner section .typo-box .intro-word {
+  font-weight: 700;
+}
+.typo-box .intro-name {
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #000;
+}
+.typo-box .intro-sta {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 33px;
+  margin-bottom: 24px;
+}
+.page2 .inner section .profile {
+  max-width: 380px;
+}
+.page2 .inner section .profile img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid #000;
+}
+/* ---------------------------------------page3시작------------------------------------------------- */
+.page3 {
+  width: 100%;
+}
+.page3 .page-background {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 956vh;
+  background: linear-gradient(
+    to bottom,
+    #ffe401 0%,
+    #fd1701 29%,
+    #cd00a0 55%,
+    #000ed3 72%,
+    #00cc01 100%
+  );
+  transform-origin: left top;
+  overflow-y: hidden;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  box-sizing: border-box;
+}
+.work_title .init {
+  display: inline-block;
+  font-size: var(--font-size-lg);
+  font-family: "Playfair Display", serif;
+  margin: 0 -8px;
+}
+.work_main {
+  width: 90%;
+  height: 40vh;
+  margin-top: -8%;
+  margin-left: 17%;
+  display: flex;
+  justify-content: space-around;
+}
+.work_main a.sw19 {
+  display: block;
+  width: 20%;
+  height: 100%;
+  background-image: url(../images/sw19_main.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-sizing: border-box;
+  position: relative;
+  transition: 0.3s;
+}
+.work_main a.sw19 .rt_deco {
+  position: absolute;
+  width: 50%;
+  bottom: -10%;
+  right: -10%;
+  transform: rotate(15deg);
+  opacity: 0;
+  transition: 0.3s;
+}
+.work_main a.sw19 .lt_deco {
+  position: absolute;
+  width: 45%;
+  top: -10%;
+  left: -15%;
+  transform: rotate(55deg);
+  opacity: 0;
+  transition: 0.3s;
+}
+.work_main a.sw19:hover {
+  border-radius: 50%;
+}
+.work_main a.sw19:hover .rt_deco,
+.work_main a.sw19:hover .lt_deco {
+  opacity: 1;
+}
+.work_main .video {
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.work_main .video video {
+  width: 100%;
+}
+.section_desc {
+  border: 1px solid #000;
+}
+/*-------------------------------------------media screen---------------------------------------------*/
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 80%;
+  }
+  .page1 .text .main-text {
+    font-size: 80px;
+  }
+  .square a {
+    visibility: visible;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav .circle {
+    border: none;
+  }
+  .page2 .inner {
+    justify-content: flex-start;
+  }
+  .page2 .inner section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20% 0;
+  }
+  .page2 .inner section .typo-box {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  .page2 .inner section .profile {
+    width: 50%;
+    height: 35%;
+  }
+  .page3 .work_main {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .page3 .work_main a.sw19 {
+    width: 100%;
+    height: 50%;
+  }
+  .page3 .work_main .video {
+    width: 100%;
+    height: 40%;
+  }
+}

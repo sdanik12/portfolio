@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: helvetica, "Noto Sans KR", "applesdgothicneo", sans-serif;
+  font-size: 13px;
+}
+.wrap {
+  width: 100%;
+}
+.top {
+  background: #000;
+  width: 100%;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 0px 5px;
+}
+header {
+  height: 80px;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+header .top2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+header .top2 .nav > ul {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  margin: 0 1em;
+}
+header .top2 .nav > ul > li {
+  margin-right: 23px;
+}
+header .top2 .nav > ul > li:first-of-type,
+header .top2 .nav > ul > li:nth-of-type(2) {
+  position: relative;
+}
+header .top2 .nav > ul > li:first-of-type > ul,
+header .top2 .nav > ul > li:nth-of-type(2) > ul {
+  position: absolute;
+  width: 160px;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: 0.3s;
+  background: #fff;
+}
+header .top2 .nav > ul > li:first-of-type > ul a,
+header .top2 .nav > ul > li:nth-of-type(2) > ul a {
+  display: block;
+  padding: 13px 20px;
+  line-height: 18.5px;
+  font-size: 12px;
+  font-weight: 200;
+  color: #212121;
+}
+header .top2 .nav > ul > li:first-of-type:hover ul,
+header .top2 .nav > ul > li:nth-of-type(2):hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+header .top2 .nav > ul > li:first-of-type > ul li,
+header .top2 .nav > ul > li:nth-of-type(2) > ul li {
+  transition: 0.3s;
+}
+header .top2 .nav > ul > li:first-of-type > ul li:hover,
+header .top2 .nav > ul > li:nth-of-type(2) > ul li:hover {
+  background: #000;
+}
+header .top2 .nav > ul > li:first-of-type > ul li:hover a,
+header .top2 .nav > ul > li:nth-of-type(2) > ul li:hover a {
+  color: #fff;
+}
+header .top2 .nav > ul > li:last-child {
+  margin-right: 0;
+}
+header .top2 .nav > ul > li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+header .top2 .nav > ul > li > ul {
+  display: flex;
+  flex-direction: column;
+}
+header .top2 i {
+  display: none;
+}
+header .top2 .forcenter .logo img {
+  width: 61px;
+  height: 40px;
+}
+header .top2 .forcenter {
+  display: flex;
+  width: calc(50% + (61px / 2));
+  justify-content: space-between;
+}
+header .top2 .join > a,
+header .top2 .join #bag {
+  display: none;
+}
+header .top2 .join > ul {
+  display: flex;
+  margin: 0 1em;
+  align-items: center;
+  height: 40px;
+}
+header .top2 .join > ul > li {
+  margin-right: 23px;
+}
+header .top2 .join > ul > li:last-child {
+  margin-right: 0;
+}
+header .top2 .join > ul > li a {
+  font-size: 14px;
+}
+.container #contents {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 0 15px;
+}
+.container #contents h2 {
+  text-align: center;
+  font-family: "Playfair Display", "Noto Sans KR", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-weight: normal;
+  margin-top: 60px;
+}
+.container #contents h2 span {
+  border-top: 2px solid #000;
+  font-size: 30px;
+  display: inline-block;
+  padding: 8px 0 9px;
+  margin-bottom: 10px;
+}
+.container #contents .product_area ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.container #contents .product_area ul li {
+  text-align: center;
+  width: 33.333%;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+}
+.container #contents .product_area ul li .thumbnail {
+  margin: 0 0 10px;
+  position: relative;
+}
+.container #contents .product_area ul li .thumbnail:hover .pd_hover_image {
+  opacity: 1;
+}
+.container #contents .product_area ul li .thumbnail .pd_hover_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.container #contents .product_area ul li .thumbnail a img {
+  width: 100%;
+}
+.container #contents .product_area ul li .desc {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container #contents .product_area ul li .desc .pd_name {
+  display: block;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: "Playfair Display", "Noto Sans KR", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  margin-bottom: 4.8px;
+}
+.container #contents .product_area ul li .desc > div,
+.container #contents .product_area ul li .desc > span {
+  padding: 6px 0;
+}
+.wrap footer {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px 80px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.wrap footer h2 {
+  padding: 80px 0 70px;
+}
+.wrap footer h2 img {
+  height: 40px;
+}
+.wrap footer .footer_inner .footer_flex_spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap footer .footer_inner .info_address {
+  text-align: left;
+  font-size: 8px;
+  line-height: 1.2;
+}
+.wrap footer .footer_inner .info_address span:first-child {
+  padding-top: 7px;
+}
+.wrap footer .footer_inner .info_address span {
+  display: block;
+  padding: 10px 0 0;
+}
+.wrap footer .footer_inner .info_customer {
+  text-align: right;
+  font-size: 8px;
+}
+.wrap footer .footer_inner .info_customer .copyright {
+  padding: 8px 0 0;
+}
+.wrap footer .footer_inner .info_customer ul {
+  padding: 8px 0 0;
+  display: flex;
+}
+.wrap footer .footer_inner .info_customer ul li span {
+  padding: 0 4px;
+}
+.wrap footer .footer_inner .info_customer .sns a i {
+  font-size: 16px;
+  padding: 8px 0 0;
+}
+/* #totop.show {
+    opacity: 1;
+    visibility: visible;
+  } */
+.wrap #totop {
+  display: inline-block;
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  z-index: 999;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  /* opacity: 0; */
+  text-align: center;
+  /* visibility: hidden; */
+}
+#totop img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 1023px) {
+  .wrap header .nav {
+    display: none;
+  }
+  header .top2 #nav_bars {
+    display: block;
+    line-height: 2.4;
+    font-size: 16px;
+  }
+  header .top2 .forcenter .join ul {
+    display: none;
+  }
+  header .top2 .forcenter .join > a,
+  header .top2 .forcenter .join #bag {
+    display: inline-block;
+    font-size: 17px;
+    margin-left: 20px;
+    line-height: 2.4;
+  }
+}

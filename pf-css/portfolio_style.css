@@ -298,7 +298,7 @@ nav .circle a {
   transform: rotate(15deg);
   opacity: 0;
   transition: opacity 1.8s;
-  z-index: 1;
+  z-index: 2;
 }
 .work_main .poster .lt_deco {
   position: absolute;
@@ -308,7 +308,7 @@ nav .circle a {
   transform: rotate(55deg);
   opacity: 0;
   transition: opacity 1.5s;
-  z-index: 1;
+  z-index: 2;
 }
 .work_main .poster .frame {
   position: absolute;
@@ -322,6 +322,8 @@ nav .circle a {
 }
 .work_main .poster:hover a.sw19 {
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
 }
 .work_main .poster:hover .rt_deco,
 .work_main .poster:hover .lt_deco,
@@ -339,12 +341,23 @@ nav .circle a {
 .work_main .video video {
   width: 100%;
 }
-
-.section_desc {
-  padding: 7% 0 10% 10%;
+.section {
+  padding: 7% 0 7% 10%;
   font-size: var(--font-size-sm);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   line-height: 2.2rem;
+}
+.section:first-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+.section .role {
+  text-align: right;
+}
+.section .role li:first-child {
+  font-weight: 800;
+}
+.section .font {
 }
 /*-------------------------------------------media screen---------------------------------------------*/
 @media screen and (max-width: 1023px) {

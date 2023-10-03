@@ -113,7 +113,7 @@ body {
 }
 
 .page1 .page-color {
-  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  background-image: linear-gradient(180deg, #52fbaf 0%, #52b6fc 50%, #b3def9 100%);
 }
 
 .page1 .text {
@@ -174,11 +174,11 @@ body {
 /* ---------------------------------------page2시작------------------------------------------------ */
 .page2 {
   width: 100%;
-  
+
 }
 
 .page2 .page-color {
-  background: linear-gradient(to bottom, #009efd 0%, #ffe401 100%);
+  background: linear-gradient(to bottom, #b3def9 0%, #fff9c5 100%);
 }
 
 nav {
@@ -296,11 +296,11 @@ nav .circle a {
   width: 100%;
   height: 940vh;
   background: linear-gradient(to bottom,
-      #ffe401 0%,
-      #fd1701 29%,
-      #cd00a0 55%,
-      #000ed3 72%,
-      #00cc01 100%);
+      #fff9c5 0%,
+      #ffbbb5 29%,
+      #d0a0c5 55%,
+      #a4a7e0 72%,
+      #89cb89 100%);
   transform-origin: left top;
   overflow-y: hidden;
 }
@@ -311,6 +311,7 @@ nav .circle a {
   padding: 10%;
   box-sizing: border-box;
 }
+
 .work_title .init {
   display: inline-block;
   font-size: var(--font-size-xl);
@@ -494,9 +495,11 @@ nav .circle a {
 .mobile img {
   width: 100%;
 }
-.container .section-kopri{
+
+.container .section-kopri {
   padding-top: 30%;
 }
+
 .work_main a.kopri {
   background-image: url(../images/kopri_main.jpg);
   background-size: cover;
@@ -533,6 +536,7 @@ nav .circle a {
   font-weight: normal;
   font-style: normal;
 }
+
 .font .kopri-kr p {
   font-family: 'GmarketSansMedium';
 }
@@ -540,12 +544,15 @@ nav .circle a {
 .font .kopri-en p {
   font-family: 'Noto Sans KR', sans-serif;
 }
-.contact{
+
+.contact {
   padding-top: 15%;
 }
-.contact-mention{
+
+.contact-mention {
   padding-top: 5%;
 }
+
 .contact-line {
   width: 100%;
   display: flex;
@@ -569,12 +576,14 @@ nav .circle a {
   background: #000;
   display: inline-block;
 }
+
 /*-------------------------------------------media screen---------------------------------------------*/
-@media screen and (min-width:1920px){
-.page3 .page-background{
-  height: 800vh;
+@media screen and (min-width:1920px) {
+  .page3 .page-background {
+    height: 800vh;
+  }
 }
-}
+
 @media screen and (max-width: 1023px) {
   html {
     font-size: 80%;
@@ -605,9 +614,11 @@ nav .circle a {
   nav .circle {
     border: none;
   }
-.page2 .page-color{
-  height: 140vh;
-}
+
+  .page2 .page-color {
+    height: 140vh;
+  }
+
   .page2 .inner {
     justify-content: flex-start;
   }
@@ -628,9 +639,11 @@ nav .circle a {
     width: 50%;
     height: 35%;
   }
-.page3 .page-background{
-height: 890vh;
-}
+
+  .page3 .page-background {
+    height: 890vh;
+  }
+
   .page3 .work_main {
     flex-direction: column;
     height: 70vh;
@@ -671,33 +684,41 @@ height: 890vh;
     top: 55%;
     right: -5%;
   }
-  .work_main .poster img.wave{
+
+  .work_main .poster img.wave {
     width: 50%;
     left: 30%;
     top: -30%;
   }
-  .font p{
+
+  .font p {
     font-size: var(--font-size-lg);
   }
 }
+
 @media screen and (max-width: 767px) {
-  .page3 .page-background{
+  .page3 .page-background {
     height: 830vh;
-    }
+  }
 }
-@media screen and (max-width:424px){
-  .page3 .page-background{
+
+@media screen and (max-width:424px) {
+  .page3 .page-background {
     height: 780vh;
   }
-  .font p{
+
+  .font p {
     font-size: var(--font-size-sm);
   }
-  .contact-line{
+
+  .contact-line {
     flex-direction: column;
   }
+
   .contact-line>div {
     padding-right: 0rem;
   }
+
   .contact-line>div>span {
     padding-right: 0rem;
   }

@@ -174,6 +174,7 @@ body {
 /* ---------------------------------------page2시작------------------------------------------------ */
 .page2 {
   width: 100%;
+  
 }
 
 .page2 .page-color {
@@ -293,7 +294,7 @@ nav .circle a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 956vh;
+  height: 940vh;
   background: linear-gradient(to bottom,
       #ffe401 0%,
       #fd1701 29%,
@@ -310,7 +311,6 @@ nav .circle a {
   padding: 10%;
   box-sizing: border-box;
 }
-
 .work_title .init {
   display: inline-block;
   font-size: var(--font-size-xl);
@@ -407,8 +407,8 @@ nav .circle a {
   width: 100%;
 }
 
-.section {
-  padding: 7% 0 7% 10%;
+.container .section {
+  padding: 9% 0 7% 10%;
   font-size: var(--font-size-sm);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   line-height: 2.2rem;
@@ -494,11 +494,14 @@ nav .circle a {
 .mobile img {
   width: 100%;
 }
-
+.container .section-kopri{
+  padding-top: 30%;
+}
 .work_main a.kopri {
   background-image: url(../images/kopri_main.jpg);
   background-size: cover;
-  transition: 1s;
+  background-repeat: no-repeat;
+  transition: 2s;
 }
 
 .work_main .poster img.wave {
@@ -514,7 +517,7 @@ nav .circle a {
 }
 
 .work_main .poster:hover img.wave {
-  animation: left-slide 3s forwards;
+  animation: left-slide 2s forwards;
 
 }
 
@@ -530,7 +533,6 @@ nav .circle a {
   font-weight: normal;
   font-style: normal;
 }
-
 .font .kopri-kr p {
   font-family: 'GmarketSansMedium';
 }
@@ -538,24 +540,24 @@ nav .circle a {
 .font .kopri-en p {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+.contact{
+  padding-top: 15%;
+}
+.contact-mention{
+  padding-top: 5%;
+}
 .contact-line {
   width: 100%;
   display: flex;
-  padding: 5% 0;
+  padding: 10% 0;
 }
 
 .contact-line>div {
-  width: 30%;
-  height: 100px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  border-radius: 18px;
+  padding-right: 10rem;
 }
 
 .contact-line>div>span {
-  padding-right: 40px;
+  padding-right: 3rem;
 }
 
 .contact-line>div>a {
@@ -569,6 +571,11 @@ nav .circle a {
 }
 
 /*-------------------------------------------media screen---------------------------------------------*/
+@media screen and (min-width:1920px){
+.page3 .page-background{
+  height: 800vh;
+}
+}
 @media screen and (max-width: 1023px) {
   html {
     font-size: 80%;
@@ -599,7 +606,9 @@ nav .circle a {
   nav .circle {
     border: none;
   }
-
+.page2 .page-color{
+  height: 140vh;
+}
   .page2 .inner {
     justify-content: flex-start;
   }
@@ -620,7 +629,9 @@ nav .circle a {
     width: 50%;
     height: 35%;
   }
-
+.page3 .page-background{
+height: 890vh;
+}
   .page3 .work_main {
     flex-direction: column;
     height: 70vh;
@@ -660,5 +671,35 @@ nav .circle a {
   .work_main .poster .rt_deco {
     top: 55%;
     right: -5%;
+  }
+  .work_main .poster img.wave{
+    width: 50%;
+    left: 30%;
+    top: -30%;
+  }
+  .font p{
+    font-size: var(--font-size-lg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .page3 .page-background{
+    height: 830vh;
+    }
+}
+@media screen and (max-width:424px){
+  .page3 .page-background{
+    height: 780vh;
+  }
+  .font p{
+    font-size: var(--font-size-sm);
+  }
+  .contact-line{
+    flex-direction: column;
+  }
+  .contact-line>div {
+    padding-right: 0rem;
+  }
+  .contact-line>div>span {
+    padding-right: 0rem;
   }
 }

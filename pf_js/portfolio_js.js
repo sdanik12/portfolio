@@ -38,7 +38,7 @@ $(document).ready(function () {
   $("nav .circle")
     .eq(3)
     .click(function () {
-      var resume = $(".section:last-of-type").offset();
+      var resume = $(".contact").offset();
       $("html").animate({ scrollTop: resume.top }, 400);
     });
   // ------------------------------네비게이션 클릭 이동 끝------------------------//

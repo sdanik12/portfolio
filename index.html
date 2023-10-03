@@ -13,6 +13,7 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+Display&display=swap"
     rel="stylesheet">
+  <script src="pf_js/scrollreveal.min.js"></script>
   <script src="pf_js/0823_swiper-bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
   <link rel="stylesheet" href="pf-css/aos.css" />
@@ -194,7 +195,7 @@
             </div>
           </div>
         </div>
-        <div class="section">
+        <div class="section section-kopri">
           <div class="section_title">
             <div class="work_title">
               <div class="init" data-aos="fade-down" data-aos-delay="500">
@@ -227,7 +228,7 @@
             <span class="brand_int">
               ‘극지연구소’는 극지의 변화를 감시하고 원인을 찾아내며 <br />극지역 온난화가 초래하는 문제들을 해결하는 기관입니다.
               <br />미답지인 극지를 개척하는 기관으로서 탐사 정신을 담아내고자<br> 진중한 느낌의 블랙을 메인 컬러로 사용했어요.
-              <br>탐험하고, 밝혀내고, 보도하는 저널리즘 정신을 표현하고자<br>슬라이드와 배너 모두 각진 신문, 종이의 느낌을 살렸습니다.
+              <br>탐험하고, 밝혀내고, 보도하는 저널리즘 정신은<br>신문, 종이처럼 각진 슬라이드와 배너로 표현했습니다.
             </span>
             <ul class="role">
               <li>Work Info.</li>
@@ -239,7 +240,7 @@
             </ul>
           </div>
           <div class="section">
-            <span class="change">극지라는 지역이 주는 신비로움을 표현하고자 기존 웹 페이지의 톤을 완전히 전환했습니다.
+            <span class="change kopri-change">'극지'. 그 이름이 갖는 미지의 신비함을 나타내기 위해 전체적인 톤을 블랙으로 전환했습니다.
             </span>
             <div class="font">
               <div class="kr kopri-kr">
@@ -250,6 +251,9 @@
                 <p class="txt ">Aa</p>
                 <p class="font-name">Noto Sans KR</p>
               </div>
+            </div>
+            <div class="color">
+              <img src="images/circle2.png" alt="circle2.png">
             </div>
           </div>
           <div class="section">
@@ -278,7 +282,7 @@
                 </div>
               </div>
             </div>
-            <div data-aos="fade-left" data-aos-delay="2000">
+            <div class="contact-mention" data-aos="fade-left" data-aos-delay="2000">
               저에 대해 궁금한 점이 있으시면 연락주세요.
               소통은 언제나 활짝 열려있어요!
             </div>
@@ -304,6 +308,13 @@
         duration: 1000,
         easing: "ease",
         once: false,
+      });
+      ScrollReveal().reveal('.font', {
+        // origin: 'left',
+        // interval: 500,
+        delay: 375,
+        duration: 1000,
+        reset: true
       });
     </script>
 </body>

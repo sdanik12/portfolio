@@ -11,10 +11,9 @@ $(document).ready(function () {
     if (scroll <= 800) {
       $("nav").css("visibility", "hidden");
     } else if (scroll > 800 && scroll <= 2028) {
-      // $("nav .circle").eq(1).css("background", "#000");
-      // $("nav .circle a").eq(1).css("color", "#fff");
       $("nav").css("visibility", "visible");
     } else {
+      $("nav").css("visibility", "visible");
     }
   });
   // ------------------------------네비게이션 클릭 이동 시작------------------------//
@@ -35,6 +34,12 @@ $(document).ready(function () {
     .click(function () {
       var page3 = $(".page3").offset();
       $("html").animate({ scrollTop: page3.top }, 400);
+    });
+  $("nav .circle")
+    .eq(3)
+    .click(function () {
+      var resume = $(".section:last-of-type").offset();
+      $("html").animate({ scrollTop: resume.top }, 400);
     });
   // ------------------------------네비게이션 클릭 이동 끝------------------------//
 });

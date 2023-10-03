@@ -1,33 +1,45 @@
 @charset "utf-8";
+
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: Pretendard, "Montserrat", "Noto Sans KR", sans-serif;
-}
+
+
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: #000;
 }
+
 :root {
+  --font-size-xl: 9rem;
   --font-size-lg: 7rem;
   --font-size-md: 3.2rem;
   --font-size-sm: 1.4rem;
   word-spacing: 0.4rem;
   --font-size-xs: 0.9rem;
 }
+
+body {
+  font-family: Pretendard, "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: var(--font-size-sm);
+}
+
 /* ---------------------------------------------page1시작--------------------------------------- */
 .page1 {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
 }
+
 .page-color {
   width: 100%;
   height: 100vh;
 }
+
 .square {
   position: relative;
   margin: 0 auto;
@@ -35,7 +47,8 @@ a {
   width: 150px;
   height: 150px;
 }
-.square > div:not(:nth-child(4)) {
+
+.square>div:not(:nth-child(4)) {
   border: 1px solid #000;
   border-radius: 36% 64% 54% 46% / 38% 28% 72% 62%;
   width: 150px;
@@ -45,36 +58,45 @@ a {
   animation-iteration-count: infinite;
   animation-name: rotate;
 }
+
 .square .one {
   animation-duration: 6s;
 }
+
 .square .two {
   animation-duration: 5s;
   animation-direction: reverse;
 }
+
 .square .three {
   animation-duration: 10s;
 }
+
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
 }
+
 .square:hover .one {
   animation: hover 1s forwards;
 }
+
 .square:hover .two {
   animation: hover 2s forwards;
 }
+
 .square:hover .three {
   animation: hover 2.5s forwards;
 }
+
 @keyframes hover {
   to {
     border-radius: 50%;
     transform: rotateX(360deg);
   }
 }
+
 .square a {
   display: block;
   position: absolute;
@@ -85,22 +107,27 @@ a {
   color: #000;
   visibility: hidden;
 }
+
 .square:hover a {
   visibility: visible;
 }
+
 .page1 .page-color {
   background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
 }
+
 .page1 .text {
   position: relative;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .page1 .text .txt-hidden {
   width: 100%;
   overflow: hidden;
 }
+
 .page1 .text .main-text {
   width: 100%;
   text-transform: uppercase;
@@ -112,38 +139,47 @@ a {
   white-space: nowrap;
   position: relative;
 }
+
 .page1 .text .main-text:first-of-type,
 .page1 .text .main-text:nth-of-type(5) {
   animation: text-slide-1 12s linear infinite;
 }
+
 .page1 .text .main-text:nth-of-type(3) {
   animation: text-slide-1 10s linear infinite;
 }
+
 .page1 .text .main-text:nth-of-type(2),
 .page1 .text .main-text:nth-of-type(4) {
   animation: text-slide-1 8s linear infinite;
 }
+
 @keyframes text-slide-1 {
   0% {
     right: 0;
   }
+
   100% {
     right: 700px;
   }
 }
+
 .page1 .text .main-text:hover {
   animation-play-state: paused;
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
 /* ---------------------------------------page2시작------------------------------------------------ */
 .page2 {
   width: 100%;
 }
+
 .page2 .page-color {
   background: linear-gradient(to bottom, #009efd 0%, #ffe401 100%);
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -153,7 +189,9 @@ nav {
   text-transform: uppercase;
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
   font-size: var(--font-size-xs);
+  z-index: 999;
 }
+
 nav ul {
   width: 100%;
   height: 100%;
@@ -161,10 +199,12 @@ nav ul {
   flex-direction: column;
   justify-content: space-around;
 }
+
 nav ul li {
   width: 100%;
   height: 5%;
 }
+
 nav .circle {
   position: relative;
   width: 100%;
@@ -172,6 +212,7 @@ nav .circle {
   border: 1px solid #000;
   border-radius: 50%;
 }
+
 nav .circle a {
   display: block;
   position: absolute;
@@ -179,6 +220,7 @@ nav .circle a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .page2 .inner {
   width: 80%;
   height: 100vh;
@@ -187,11 +229,13 @@ nav .circle a {
   flex-direction: column;
   justify-content: center;
 }
+
 .page2 .inner section {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
 }
+
 .page2 .inner section .typo-box {
   width: 60%;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -202,29 +246,35 @@ nav .circle a {
   text-align: left;
   margin: 0 35px;
 }
+
 .page2 .inner section .typo-box .intro {
   font-size: var(--font-size-sm);
   font-weight: 500;
   margin-bottom: 22px;
 }
+
 .page2 .inner section .typo-box .intro-word {
   font-weight: 700;
 }
+
 .typo-box .intro-name {
   font-size: var(--font-size-md);
   font-weight: 800;
   margin-bottom: 35px;
   color: #000;
 }
+
 .typo-box .intro-sta {
   font-size: var(--font-size-sm);
   font-weight: 500;
   line-height: 33px;
   margin-bottom: 24px;
 }
+
 .page2 .inner section .profile {
   max-width: 380px;
 }
+
 .page2 .inner section .profile img {
   width: 100%;
   height: 100%;
@@ -233,40 +283,43 @@ nav .circle a {
   border-radius: 18px;
   border: 1px solid #000;
 }
+
 /* ---------------------------------------page3시작------------------------------------------------- */
 .page3 {
   width: 100%;
 }
+
 .page3 .page-background {
   left: 0;
   top: 0;
   width: 100%;
   height: 956vh;
-  background: linear-gradient(
-    to bottom,
-    #ffe401 0%,
-    #fd1701 29%,
-    #cd00a0 55%,
-    #000ed3 72%,
-    #00cc01 100%
-  );
+  background: linear-gradient(to bottom,
+      #ffe401 0%,
+      #fd1701 29%,
+      #cd00a0 55%,
+      #000ed3 72%,
+      #00cc01 100%);
   transform-origin: left top;
   overflow-y: hidden;
 }
+
 .container {
   width: 100%;
   height: 100%;
   padding: 10%;
   box-sizing: border-box;
 }
+
 .work_title .init {
   display: inline-block;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-family: "Playfair Display", serif;
   margin: 0 -8px;
   position: relative;
   z-index: 99;
 }
+
 .work_main {
   width: 90%;
   height: 40vh;
@@ -275,21 +328,27 @@ nav .circle a {
   display: flex;
   justify-content: space-around;
 }
+
 .work_main .poster {
   width: 20%;
   height: 100%;
   position: relative;
 }
-.work_main a.sw19 {
+
+.work_main a.link {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url(../images/sw19_main.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 18px;
   transition: 0.3s;
 }
+
+.work_main a.sw19 {
+  background-image: url(../images/sw19_main.jpg);
+}
+
 .work_main .poster .rt_deco {
   position: absolute;
   width: 50%;
@@ -300,6 +359,7 @@ nav .circle a {
   transition: opacity 1.8s;
   z-index: 2;
 }
+
 .work_main .poster .lt_deco {
   position: absolute;
   width: 45%;
@@ -310,6 +370,7 @@ nav .circle a {
   transition: opacity 1.5s;
   z-index: 2;
 }
+
 .work_main .poster .frame {
   position: absolute;
   top: 45%;
@@ -320,16 +381,19 @@ nav .circle a {
   opacity: 0;
   transition: opacity 0.8s;
 }
-.work_main .poster:hover a.sw19 {
+
+.work_main .poster:hover a.link {
   border-radius: 50%;
   position: relative;
   z-index: 1;
 }
+
 .work_main .poster:hover .rt_deco,
 .work_main .poster:hover .lt_deco,
 .work_main .poster:hover .frame {
   opacity: 1;
 }
+
 .work_main .video {
   right: 0;
   bottom: 0;
@@ -338,43 +402,192 @@ nav .circle a {
   overflow: hidden;
   border-radius: 18px;
 }
+
 .work_main .video video {
   width: 100%;
 }
+
 .section {
   padding: 7% 0 7% 10%;
   font-size: var(--font-size-sm);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   line-height: 2.2rem;
 }
+
 .section:first-of-type {
   display: flex;
   justify-content: space-between;
 }
+
 .section .role {
   text-align: right;
 }
+
 .section .role li:first-child {
   font-weight: 800;
 }
+
 .section .font {
+  margin: 9rem auto;
+  height: 15rem;
+  display: flex;
+  justify-content: space-around;
 }
+
+.section .font>div {
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.section .font .kr {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: var(--font-size-xl);
+}
+
+.section .font .en {
+  font-family: 'Noto Serif Display', sans-serif;
+  font-size: var(--font-size-xl);
+}
+
+.section .font .font-name {
+  font-size: var(--font-size-sm);
+}
+
+.color {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.color img {
+  width: 100%;
+  animation: circle-rotate 10s linear infinite;
+}
+
+@keyframes circle-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.moodboard {
+  margin: 9rem auto;
+  width: 90%;
+  position: relative;
+}
+
+.moodboard img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.mobile {
+  margin: 0 left;
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  left: -30%;
+}
+
+.mobile img {
+  width: 100%;
+}
+
+.work_main a.kopri {
+  background-image: url(../images/kopri_main.jpg);
+  background-size: cover;
+  transition: 1s;
+}
+
+.work_main .poster img.wave {
+  transform: rotate(0deg);
+  width: 100%;
+  left: -350%;
+  top: 10%;
+}
+
+.work_main .poster:hover a.kopri {
+  border-radius: 18px;
+  width: 900px;
+}
+
+.work_main .poster:hover img.wave {
+  animation: left-slide 3s forwards;
+
+}
+
+@keyframes left-slide {
+  to {
+    left: 40%;
+  }
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font .kopri-kr p {
+  font-family: 'GmarketSansMedium';
+}
+
+.font .kopri-en p {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contact-line {
+  width: 100%;
+  display: flex;
+  padding: 5% 0;
+}
+
+.contact-line>div {
+  width: 30%;
+  height: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.contact-line>div>span {
+  padding-right: 40px;
+}
+
+.contact-line>div>a {
+  transition: 0.2s;
+}
+
+.contact-line>div>a:hover {
+  color: #00cc01;
+  background: #000;
+  display: inline-block;
+}
+
 /*-------------------------------------------media screen---------------------------------------------*/
 @media screen and (max-width: 1023px) {
   html {
     font-size: 80%;
   }
+
   .page1 .text .main-text {
     font-size: 80px;
   }
+
   .square a {
     visibility: visible;
   }
+
   nav {
     position: fixed;
     width: 100%;
     z-index: 999;
   }
+
   nav ul {
     width: 100%;
     height: 100%;
@@ -382,55 +595,68 @@ nav .circle a {
     flex-direction: row;
     justify-content: space-around;
   }
+
   nav .circle {
     border: none;
   }
+
   .page2 .inner {
     justify-content: flex-start;
   }
+
   .page2 .inner section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin: 20% 0;
   }
+
   .page2 .inner section .typo-box {
     width: 100%;
     margin-bottom: 2%;
   }
+
   .page2 .inner section .profile {
     width: 50%;
     height: 35%;
   }
+
   .page3 .work_main {
     flex-direction: column;
     height: 70vh;
   }
+
   .page3 .work_main .poster {
     width: 100%;
     height: 50%;
   }
+
   .page3 .work_main a.sw19 {
     width: 100%;
     height: 100%;
   }
+
   .page3 .work_main .video {
     width: 100%;
     height: 40%;
   }
+
   .work_main .poster .lt_deco,
   .work_main .poster .rt_deco,
   .work_main .poster .frame {
     opacity: 1;
     width: 18%;
   }
+
   .work_main .poster .frame {
     display: none;
   }
+
   .work_main .poster .lt_deco {
     top: -15%;
     left: -5%;
   }
+
   .work_main .poster .rt_deco {
     top: 55%;
     right: -5%;

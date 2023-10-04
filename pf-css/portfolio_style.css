@@ -5,8 +5,6 @@
   padding: 0;
 }
 
-
-
 ul {
   list-style: none;
 }
@@ -48,7 +46,7 @@ body {
   height: 150px;
 }
 
-.square>div:not(:nth-child(4)) {
+.square > div:not(:nth-child(4)) {
   border: 1px solid #000;
   border-radius: 36% 64% 54% 46% / 38% 28% 72% 62%;
   width: 150px;
@@ -113,7 +111,12 @@ body {
 }
 
 .page1 .page-color {
-  background-image: linear-gradient(180deg, #52fbaf 0%, #52b6fc 50%, #b3def9 100%);
+  background-image: linear-gradient(
+    180deg,
+    #52fbaf 0%,
+    #52b6fc 50%,
+    #b3def9 100%
+  );
 }
 
 .page1 .text {
@@ -174,7 +177,6 @@ body {
 /* ---------------------------------------page2시작------------------------------------------------ */
 .page2 {
   width: 100%;
-
 }
 
 .page2 .page-color {
@@ -295,12 +297,14 @@ nav .circle a {
   top: 0;
   width: 100%;
   height: 940vh;
-  background: linear-gradient(to bottom,
-      #fff9c5 0%,
-      #ffbbb5 29%,
-      #d0a0c5 55%,
-      #a4a7e0 72%,
-      #89cb89 100%);
+  background: linear-gradient(
+    to bottom,
+    #fff9c5 0%,
+    #ffbbb5 29%,
+    #d0a0c5 55%,
+    #a4a7e0 72%,
+    #89cb89 100%
+  );
   transform-origin: left top;
   overflow-y: hidden;
 }
@@ -435,7 +439,7 @@ nav .circle a {
   justify-content: space-around;
 }
 
-.section .font>div {
+.section .font > div {
   padding: 0 5%;
   display: flex;
   flex-direction: column;
@@ -444,12 +448,12 @@ nav .circle a {
 }
 
 .section .font .kr {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: var(--font-size-xl);
 }
 
 .section .font .en {
-  font-family: 'Noto Serif Display', sans-serif;
+  font-family: "Noto Serif Display", sans-serif;
   font-size: var(--font-size-xl);
 }
 
@@ -521,7 +525,6 @@ nav .circle a {
 
 .work_main .poster:hover img.wave {
   animation: left-slide 2s forwards;
-
 }
 
 @keyframes left-slide {
@@ -531,18 +534,19 @@ nav .circle a {
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 .font .kopri-kr p {
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
 }
 
 .font .kopri-en p {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .contact {
@@ -559,28 +563,28 @@ nav .circle a {
   padding: 10% 0;
 }
 
-.contact-line>div {
+.contact-line > div {
   padding-right: 10rem;
 }
 
-.contact-line>div>span {
+.contact-line > div > span {
   padding-right: 3rem;
 }
 
-.contact-line>div>a {
+.contact-line > div > a {
   transition: 0.2s;
 }
 
-.contact-line>div>a:hover {
+.contact-line > div > a:hover {
   color: #00cc01;
   background: #000;
   display: inline-block;
 }
 
 /*-------------------------------------------media screen---------------------------------------------*/
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1920px) {
   .page3 .page-background {
-    height: 800vh;
+    height: 700vh;
   }
 }
 
@@ -702,7 +706,7 @@ nav .circle a {
   }
 }
 
-@media screen and (max-width:424px) {
+@media screen and (max-width: 424px) {
   .page3 .page-background {
     height: 780vh;
   }
@@ -715,11 +719,11 @@ nav .circle a {
     flex-direction: column;
   }
 
-  .contact-line>div {
+  .contact-line > div {
     padding-right: 0rem;
   }
 
-  .contact-line>div>span {
+  .contact-line > div > span {
     padding-right: 0rem;
   }
 }

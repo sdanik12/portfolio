@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -503,4 +504,58 @@ a {
   font-family: "Noto Sans KR";
   font-weight: 100;
   font-size: 36px;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul {
+  margin: 0 -10px;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li {
+  float: left;
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a {
+  display: block;
+  overflow: hidden;
+  height: 350px;
+  background: #fff;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .thumb {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .info {
+  padding: 25px 30px 0;
+  background: #fff;
+  text-align: left;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .info strong {
+  display: block;
+  overflow: hidden;
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1c2841;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .info p {
+  margin: 5px 0 15px;
+  font-size: 15px;
+  color: #767676;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .info .sns {
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul li a .info .sns span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  background: #bf3a39 url(../images/sns.png) no-repeat -150px 0;
+  background-size: 180px auto;
 }/*# sourceMappingURL=kopri_index.css.map */

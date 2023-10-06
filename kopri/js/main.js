@@ -51,91 +51,42 @@ $(function () {
       }
       gnb[keys].classList.remove("on", "active");
     });
+    $(".fade").slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: "linear",
+    });
   });
   //---------------------------------내비게이션 끝---------------------------//
-  // let i = 1;
-  // $("#btn_top").click(function () {
-  //   if (i == 1) {
-  //     for (let i = 0; i < 4; i++) {
-  //       $(".square")
-  //         .eq(i)
-  //         .css({ background: "url(images/article" + (i + 2) + ".png)" });
-  //       if (i == 3) {
-  //         $(".square").eq(3).css({ background: "url(images/article1.png)" });
-  //       }
-  //     }
-  //     $(".dot li a").removeClass();
-  //     $(".dot li").eq(i).find("a").addClass("on");
-  //     i++;
-  //   } else if (i == 2) {
-  //     for (let i = 0; i < 4; i++) {
-  //       $(".square")
-  //         .eq(i)
-  //         .css({ background: "url(images/article" + (i + 3) + ".png)" });
-  //       if (i == 2) {
-  //         $(".square").eq(2).css({ background: "url(images/article1.png)" });
-  //       }
-  //       if (i == 3) {
-  //         $(".square").eq(3).css({ background: "url(images/article2.png)" });
-  //       }
-  //     }
-  //     $(".dot li a").removeClass();
-  //     $(".dot li").eq(i).find("a").addClass("on");
-  //     i++;
-  //   } else if (i == 3) {
-  //     $(".square").eq(0).css({ background: "url(images/article4.png)" });
 
-  //     $(".square").eq(1).css({ background: "url(images/article1.png)" });
-
-  //     $(".square").eq(2).css({ background: "url(images/article2.png)" });
-
-  //     $(".square").eq(3).css({ background: "url(images/article3.png)" });
-
-  //     $(".dot li a").removeClass();
-  //     $(".dot li").eq(i).find("a").addClass("on");
-  //     i = 0;
-  //   } else if (i == 0) {
-  //     $(".square").eq(0).css({ background: "url(images/article1.png)" });
-
-  //     $(".square").eq(1).css({ background: "url(images/article2.png)" });
-
-  //     $(".square").eq(2).css({ background: "url(images/article3.png)" });
-
-  //     $(".square").eq(3).css({ background: "url(images/article4.png)" });
-
-  //     $(".dot li a").removeClass();
-  //     $(".dot li").eq(i).find("a").addClass("on");
-  //     i++;
-  //   }
-  // });
-  $(".loop").owlCarousel({
-    center: true,
-    items: 1,
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
     loop: true,
-    margin: 10,
     nav: true,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
+    margin: 10,
     responsive: {
+      0: {
+        items: 1,
+      },
       600: {
-        items: 2,
+        items: 1,
+      },
+      960: {
+        items: 1,
+      },
+      1200: {
+        items: 1,
       },
     },
   });
-  $(".nonloop").owlCarousel({
-    center: true,
-    items: 1,
-    loop: false,
-    margin: 10,
-    nav: true,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    responsive: {
-      600: {
-        items: 2,
-      },
-    },
+  owl.on("mousewheel", ".owl-stage", function (e) {
+    if (e.deltaY > 0) {
+      owl.trigger("next.owl");
+    } else {
+      owl.trigger("prev.owl");
+    }
+    e.preventDefault();
   });
 });

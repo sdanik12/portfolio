@@ -20,8 +20,19 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: inherit;
+  word-break: break-all;
   color: #fff;
+}
+
+em {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: top;
+  background: transparent;
+  word-break: break-all;
 }
 
 .top_layout {
@@ -195,8 +206,45 @@ a {
   background: #fff;
 }
 
+.owl-prev > span,
+.owl-next > span {
+  color: #fff;
+}
+
 .body_layout {
   width: 100%;
+}
+.body_layout .cont .layout {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.body_layout .cont .cont_title {
+  padding: 105px 0 85px;
+  text-align: center;
+}
+.body_layout .cont .cont_title > span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(213, 213, 213, 0.4);
+  letter-spacing: 0.2em;
+}
+.body_layout .cont .cont_title strong {
+  display: block;
+  margin: 10px 0 0;
+  line-height: 1;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Noto Sans KR";
+  color: #fff;
+}
+.body_layout .cont .cont_title strong > span {
+  display: inline-block;
+  line-height: 1;
+  margin: 0 10px 0 0;
+  font-family: "Noto Sans KR";
+  font-weight: 100;
+  font-size: 36px;
 }
 .body_layout .cont1 {
   width: 100%;
@@ -204,17 +252,16 @@ a {
   background: url(../images/aurora.jpg);
   background-size: cover;
   position: relative;
-  padding: 100px 0 220px 0;
+  padding: 150px 0 170px 0;
 }
 .body_layout .cont1 .main_visual {
   position: relative;
-  max-width: 1280px;
-  height: 400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .body_layout .cont1 .main_visual .owl-carousel .item {
   position: relative;
-  width: 600px;
+  width: 100%;
   height: 500px;
   margin: 0 10px;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px, rgba(0, 0, 0, 0.5) 0px 7px 13px -3px, rgba(0, 0, 0, 0.4) 0px -3px 0px inset;
@@ -315,38 +362,6 @@ a {
 .body_layout .cont2 {
   padding: 0 0 95px;
 }
-.body_layout .cont2 .layout {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-.body_layout .cont2 .layout .cont_title {
-  padding: 105px 0 85px;
-  text-align: center;
-}
-.body_layout .cont2 .layout .cont_title > span {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba(213, 213, 213, 0.4);
-  letter-spacing: 0.2em;
-}
-.body_layout .cont2 .layout .cont_title strong {
-  display: block;
-  margin: 10px 0 0;
-  line-height: 1;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: "Noto Sans KR";
-  color: #fff;
-}
-.body_layout .cont2 .layout .cont_title strong > span {
-  display: inline-block;
-  line-height: 1;
-  margin: 0 10px 0 0;
-  font-family: "Noto Sans KR";
-  font-weight: 100;
-  font-size: 36px;
-}
 .body_layout .cont2 .layout ul {
   margin: 0 -10px;
 }
@@ -394,18 +409,18 @@ a {
 }
 .body_layout .cont2 .layout ul li a span.line {
   position: absolute;
-  background: #014a94;
+  background: #0633ad;
 }
 .body_layout .cont2 .layout ul li a .line-top {
   width: 100%;
-  height: 5px;
+  height: 4px;
   left: 0;
   top: 0;
   transform: scaleX(0);
   transform-origin: 50% 0;
 }
 .body_layout .cont2 .layout ul li a .line-right {
-  width: 5px;
+  width: 4px;
   height: 100%;
   right: 0%;
   top: 0;
@@ -414,14 +429,14 @@ a {
 }
 .body_layout .cont2 .layout ul li a .line-bottom {
   width: 100%;
-  height: 5px;
+  height: 4px;
   left: 0%;
   bottom: 0;
   transform: scaleX(0);
   transform-origin: 50% 0;
 }
 .body_layout .cont2 .layout ul li a .line-left {
-  width: 5px;
+  width: 4px;
   height: 100%;
   left: 0%;
   top: 0;
@@ -472,38 +487,6 @@ a {
 }
 .body_layout .cont3 {
   padding: 0 0 95px;
-}
-.body_layout .cont3 .layout {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-.body_layout .cont3 .layout .cont_title {
-  padding: 105px 0 85px;
-  text-align: center;
-}
-.body_layout .cont3 .layout .cont_title > span {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba(213, 213, 213, 0.4);
-  letter-spacing: 0.2em;
-}
-.body_layout .cont3 .layout .cont_title strong {
-  display: block;
-  margin: 10px 0 0;
-  line-height: 1;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: "Noto Sans KR";
-  color: #fff;
-}
-.body_layout .cont3 .layout .cont_title strong > span {
-  display: inline-block;
-  line-height: 1;
-  margin: 0 10px 0 0;
-  font-family: "Noto Sans KR";
-  font-weight: 100;
-  font-size: 36px;
 }
 .body_layout .cont3 .layout .sns_wrap1 ul {
   margin: 0 -10px;
@@ -558,4 +541,80 @@ a {
   border-radius: 50%;
   background: #bf3a39 url(../images/sns.png) no-repeat -150px 0;
   background-size: 180px auto;
+}
+.body_layout .cont3 .layout .sns_wrap1 ul:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  content: "";
+}
+.body_layout .cont3 .layout .sns_wrap2 {
+  padding: 60px 0 90px;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul {
+  text-align: center;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li a {
+  display: block;
+  line-height: 40px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li a em {
+  font-style: normal;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  background: url(../images/sns.png) no-repeat;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n1 span {
+  background-position: 0 0;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n2 span {
+  background-position: -40px 0;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n3 span {
+  background-position: -80px 0;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n4 span {
+  background-position: -120px 0;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n5 span {
+  background-position: -160px 0;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul li.n6 span {
+  background-position: -200px 0;
+  background-color: #bf3a39;
+}
+.body_layout .cont3 .layout .sns_wrap2 ul:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  content: "";
+}
+.body_layout .cont4 {
+  overflow: hidden;
+  position: relative;
+}
+.body_layout .cont4 .cont_inner {
+  position: relative;
+}
+.body_layout .cont4::before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #eaedf5;
+  width: 100%;
+  height: 400px;
 }/*# sourceMappingURL=kopri_index.css.map */

@@ -51,16 +51,9 @@ $(function () {
       }
       gnb[keys].classList.remove("on", "active");
     });
-    $(".fade").slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: "linear",
-    });
   });
   //---------------------------------내비게이션 끝---------------------------//
-
+  //---------------------------------기사 슬라이드 시작---------------------------//
   var owl = $(".owl-carousel");
   owl.owlCarousel({
     loop: true,
@@ -88,5 +81,19 @@ $(function () {
       owl.trigger("prev.owl");
     }
     e.preventDefault();
+  });
+  //-------------------------------------기사 슬라이드 끝----------------------------//
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 });

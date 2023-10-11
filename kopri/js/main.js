@@ -115,7 +115,7 @@ $(function () {
   $(".slide-btn button").on("click", function (e) {
     e.preventDefault();
     let targetIndex = parseInt($(this).data("slide-index"));
-    swiper.slideTo(targetIndex);
+    $(".swiper-pagination-bullet:eq(" + targetIndex + ")").trigger("click");
   });
 
   $(".slide-btn button").hover(

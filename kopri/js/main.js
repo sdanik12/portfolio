@@ -97,26 +97,29 @@ $(function () {
     },
   });
   // ------------------------swiper inner----------------------//
-  $(".banner li").each(function (index, item) {
-    console.log(index);
-    let n = index * -52 + "px";
-    $(item)
-      .find("span.ico")
-      .css("background-position", n + " -52px");
-  });
+  // $(".banner li").each(function (index, item) {
+  //   console.log(index);
+  //   let n = index * -52 + "px";
+  //   $(item)
+  //     .find("span.ico")
+  //     .css("background-position", n + " -52px");
+  // });
 
-  $("span.ico").hover(
-    function () {
-      let i = $(this).parent().parent().index();
-      let n = i * -52 + "px";
-      console.log(n);
-      $(this).css("background-position", n + " 0");
-    },
-    function () {
-      let i = $(this).parent().parent().index();
-      let n = i * -52 + "px";
-      console.log(n);
-      $(this).css("background-position", n + " -52px");
-    }
-  );
+  // $("span.ico").hover(
+  //   function () {
+  //     let i = $(this).parent().parent().index();
+  //     let n = i * -52 + "px";
+  //     console.log(n);
+  //     $(this).css("background-position", n + " 0");
+  //     $(this).css("background-color", "#fff");
+  //     $(this + "em").css("background-color", "#fff");
+  //   },
+  //   function () {
+  //     let i = $(this).parent().parent().index();
+  //     let n = i * -52 + "px";
+  //     console.log(n);
+  //     $(this).css("background-position", n + " -52px");
+  //     $(this).css("background-color", "transparent");
+  //   }
+  // );
 });

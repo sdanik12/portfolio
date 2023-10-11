@@ -615,6 +615,28 @@ em {
 .body_layout .cont4 .cont_inner .layout .inner .swiper {
   width: 1300px;
   height: 470px;
+  overflow: visible;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-prev,
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-next {
+  top: 110%;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-prev {
+  left: 40%;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-next {
+  right: 40%;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-prev:after,
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-button-next:after {
+  font-size: 20px;
+  color: #fff;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-pagination {
+  top: 108%;
+}
+.body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-pagination-bullet {
+  background-color: #fff;
 }
 .body_layout .cont4 .cont_inner .layout .inner .swiper .swiper-wrapper {
   position: relative;

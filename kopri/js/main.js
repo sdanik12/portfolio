@@ -104,19 +104,29 @@ $(function () {
     },
     on: {
       slideChange: function () {
+        let currentIndex = this.realIndex;
+        // console.log(currentIndex);
         // Swiper 슬라이드가 변경될 때 메뉴 항목의 활성 상태를 업데이트
         $(".slide-btn button").removeClass("on");
-        $(".slide-btn").eq(this.realIndex).find("button").addClass("on");
+        $(".slide-btn").eq(currentIndex).find("button").addClass("on");
       },
     },
   });
   $(".slide-btn button").on("click", function (e) {
     e.preventDefault();
-    let i = $(this).parent().index();
-    console.log(i);
-    swiper.slideTo(i);
+    let targetIndex = parseInt($(this).data("slide-index"));
+    swiper.slideTo(targetIndex);
   });
-  // ------------------------swiper inner----------------------//
+
+  $(".slide-btn button").hover(
+    function () {
+      swiper.autoplay.stop();
+    },
+    function () {
+      swiper.autoplay.start();
+    }
+  );
+  //----------------------swiper inner----------------------//
   // $(".banner li").each(function (index, item) {
   //   console.log(index);
   //   let n = index * -52 + "px";

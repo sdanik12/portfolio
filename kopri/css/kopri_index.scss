@@ -628,6 +628,28 @@ em {
           .swiper {
             width: 1300px;
             height: 470px;
+            overflow: visible;
+            .swiper-button-prev,
+            .swiper-button-next {
+              top: 110%;
+            }
+            .swiper-button-prev {
+              left: 40%;
+            }
+            .swiper-button-next {
+              right: 40%;
+            }
+            .swiper-button-prev:after,
+            .swiper-button-next:after {
+              font-size: 20px;
+              color: #fff;
+            }
+            .swiper-pagination {
+              top: 108%;
+            }
+            .swiper-pagination-bullet {
+              background-color: #fff;
+            }
             .swiper-wrapper {
               position: relative;
               .slide-nav {

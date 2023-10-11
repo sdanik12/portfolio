@@ -500,7 +500,36 @@ em {
   }
   .cont3 {
     padding: 0 0 95px;
+    position: relative;
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      .bg-video-cont {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+      }
+    }
+    .bg-bk-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 0%, #000 100%);
+      z-index: -1;
+    }
     .layout {
+      .cont_title {
+        span#bk {
+          color: rgb(80, 80, 80);
+        }
+      }
       .sns_wrap1 {
         ul {
           margin: 0 -10px;

@@ -83,9 +83,11 @@ $(function () {
     e.preventDefault();
   });
   //-------------------------------------기사 슬라이드 끝----------------------------//
+
+  $(".slide-btn").eq(0).find("button").addClass("on");
   var swiper = new Swiper(".mySwiper", {
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 0,
     effect: "fade",
     navigation: {
       nextEl: ".swiper-button-next",
@@ -95,6 +97,24 @@ $(function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    on: {
+      slideChange: function () {
+        // Swiper 슬라이드가 변경될 때 메뉴 항목의 활성 상태를 업데이트
+        $(".slide-btn button").removeClass("on");
+        $(".slide-btn").eq(this.realIndex).find("button").addClass("on");
+      },
+    },
+  });
+  $(".slide-btn button").on("click", function (e) {
+    e.preventDefault();
+    let i = $(this).parent().index();
+    console.log(i);
+    swiper.slideTo(i);
   });
   // ------------------------swiper inner----------------------//
   // $(".banner li").each(function (index, item) {

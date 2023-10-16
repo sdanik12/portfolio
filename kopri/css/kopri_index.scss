@@ -1068,7 +1068,7 @@ footer {
           content: "";
           transform: rotate(45deg);
         }
-        > button {
+        > button.fsite_btn {
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
@@ -1083,13 +1083,12 @@ footer {
           background: #242835;
           border: none;
         }
-        > div {
-          display: block;
+        > div.fsite {
+          display: none;
           position: absolute;
           left: 0;
-          bottom: 0;
+          bottom: 79px;
           width: 100%;
-          padding: 0 0 79px;
           .ul {
             .li {
               display: block;
@@ -1143,11 +1142,11 @@ footer {
       position: absolute;
       right: 0;
       top: 40px;
+      display: flex;
       ul {
-        display: inline-block;
         margin: 10px 10px 0 0;
+        display: flex;
         li {
-          display: inline-block;
           margin: 0 5px;
           a {
             display: block;
@@ -1178,7 +1177,6 @@ footer {
       }
     }
     .web_mark {
-      display: inline-block;
       width: 70px;
     }
   }

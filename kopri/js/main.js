@@ -56,23 +56,12 @@ $(function () {
   //---------------------------------기사 슬라이드 시작---------------------------//
   var owl = $(".owl-carousel");
   owl.owlCarousel({
+    autoplay: true,
+    rewind: true,
     loop: true,
     nav: true,
     margin: 10,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      960: {
-        items: 1,
-      },
-      1200: {
-        items: 1,
-      },
-    },
+    items: 1,
   });
   owl.on("mousewheel", ".owl-stage", function (e) {
     if (e.deltaY > 0) {
@@ -83,7 +72,7 @@ $(function () {
     e.preventDefault();
   });
   //-------------------------------------기사 슬라이드 끝----------------------------//
-
+  //--------------------------------하단 슬라이드 시작------------------------------//
   $(".slide-btn").eq(0).find("button").addClass("on");
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -126,30 +115,15 @@ $(function () {
       swiper.autoplay.start();
     }
   );
-  //----------------------swiper inner----------------------//
-  // $(".banner li").each(function (index, item) {
-  //   console.log(index);
-  //   let n = index * -52 + "px";
-  //   $(item)
-  //     .find("span.ico")
-  //     .css("background-position", n + " -52px");
-  // });
-
-  // $("span.ico").hover(
-  //   function () {
-  //     let i = $(this).parent().parent().index();
-  //     let n = i * -52 + "px";
-  //     console.log(n);
-  //     $(this).css("background-position", n + " 0");
-  //     $(this).css("background-color", "#fff");
-  //     $(this + "em").css("background-color", "#fff");
-  //   },
-  //   function () {
-  //     let i = $(this).parent().parent().index();
-  //     let n = i * -52 + "px";
-  //     console.log(n);
-  //     $(this).css("background-position", n + " -52px");
-  //     $(this).css("background-color", "transparent");
-  //   }
-  // );
+  //--------------------------------하단 슬라이드 끝------------------------------//
+  //--------------------------------푸터 패밀리사이트 버튼------------------------//
+  let fsite = true;
+  $(".fsite_btn").click(function () {
+    if ($(".fsite").css("display") == "none") {
+      $(".fsite").slideDown();
+    } else {
+      $(".fsite").slideUp();
+    }
+    fsite = !fsite;
+  });
 });

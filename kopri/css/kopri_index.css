@@ -1035,7 +1035,7 @@ footer .footer-link .linksite-wrap .linksite:after {
   content: "";
   transform: rotate(45deg);
 }
-footer .footer-link .linksite-wrap .linksite > button {
+footer .footer-link .linksite-wrap .linksite > button.fsite_btn {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1050,22 +1050,21 @@ footer .footer-link .linksite-wrap .linksite > button {
   background: #242835;
   border: none;
 }
-footer .footer-link .linksite-wrap .linksite > div {
-  display: block;
+footer .footer-link .linksite-wrap .linksite > div.fsite {
+  display: none;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 79px;
   width: 100%;
-  padding: 0 0 79px;
 }
-footer .footer-link .linksite-wrap .linksite > div .ul .li {
+footer .footer-link .linksite-wrap .linksite > div.fsite .ul .li {
   display: block;
   width: 100%;
   height: 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: #242835;
 }
-footer .footer-link .linksite-wrap .linksite > div .ul .li a {
+footer .footer-link .linksite-wrap .linksite > div.fsite .ul .li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -1104,13 +1103,13 @@ footer .footer-info .flogo {
   position: absolute;
   right: 0;
   top: 40px;
+  display: flex;
 }
 footer .footer-info .flogo ul {
-  display: inline-block;
   margin: 10px 10px 0 0;
+  display: flex;
 }
 footer .footer-info .flogo ul li {
-  display: inline-block;
   margin: 0 5px;
 }
 footer .footer-info .flogo ul li a {
@@ -1139,6 +1138,5 @@ footer .footer-info .flogo ul li.n6 a {
   background-position: -163px 0;
 }
 footer .footer-info .web_mark {
-  display: inline-block;
   width: 70px;
 }/*# sourceMappingURL=kopri_index.css.map */

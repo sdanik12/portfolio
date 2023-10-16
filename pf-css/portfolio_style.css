@@ -499,7 +499,19 @@ nav .circle a {
 .mobile img {
   width: 100%;
 }
-
+.design {
+  margin-top: 20rem;
+  width: 100%;
+}
+/* .design-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+} */
+.design-img img {
+  width: 100%;
+}
+/* -----------------------------------kopri start------------------------------- */
 .container .section-kopri {
   padding-top: 30%;
 }

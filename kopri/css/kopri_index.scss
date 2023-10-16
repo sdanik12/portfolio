@@ -477,10 +477,10 @@ em {
           background-image: url(../images/img4.jpg);
         }
         li.n5 .thumb {
-          background-image: url(../images/img5.jpg);
+          background-image: url(../images/employment.jpg);
         }
         li.n6 .thumb {
-          background-image: url(../images/img6.png);
+          background-image: url(../images/lab.jpg);
         }
         li.n7 .thumb {
           background-image: url(../images/img7.jpg);
@@ -996,8 +996,6 @@ em {
       }
     }
   }
-  .scrolltop {
-  }
 }
 .layout {
   position: relative;
@@ -1180,4 +1178,22 @@ footer {
       width: 70px;
     }
   }
+}
+#totop {
+  position: fixed;
+  border-radius: 50%;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "Noto Sans KR";
+  width: 50px;
+  height: 50px;
+  background: rgb(41, 41, 41);
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+#totop.show {
+  opacity: 1;
 }

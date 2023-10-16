@@ -126,4 +126,17 @@ $(function () {
     }
     fsite = !fsite;
   });
+  //--------------------------------To Top------------------------//
+  $(window).scroll(function () {
+    let ht = $(window).scrollTop();
+    console.log(ht);
+    if (ht > 50) {
+      $("#totop").addClass("show");
+    } else {
+      $("#totop").removeClass("show");
+    }
+  });
+  $("#totop").click(function () {
+    $("html, body").animate({ scrollTop: "0" }, 700);
+  });
 });

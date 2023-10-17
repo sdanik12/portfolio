@@ -296,7 +296,7 @@ nav .circle a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 940vh;
+  /* height: 1120vh; */
   background: linear-gradient(
     to bottom,
     #fff9c5 0%,
@@ -417,6 +417,7 @@ nav .circle a {
   font-size: var(--font-size-sm);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   line-height: 2.2rem;
+  box-sizing: border-box;
 }
 
 .section:first-of-type {
@@ -503,11 +504,6 @@ nav .circle a {
   margin-top: 20rem;
   width: 100%;
 }
-/* .design-img {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-} */
 .design-img img {
   width: 100%;
 }
@@ -560,7 +556,15 @@ nav .circle a {
 .font .kopri-en p {
   font-family: "Noto Sans KR", sans-serif;
 }
-
+/* ----------------------------------------------------contact page------------------------------------------------- */
+.contact-page {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
 .contact {
   padding-top: 15%;
 }
@@ -594,11 +598,6 @@ nav .circle a {
 }
 
 /*-------------------------------------------media screen---------------------------------------------*/
-@media screen and (min-width: 1920px) {
-  .page3 .page-background {
-    height: 820vh;
-  }
-}
 
 @media screen and (max-width: 1023px) {
   html {
@@ -658,10 +657,6 @@ nav .circle a {
     height: 35%;
   }
 
-  .page3 .page-background {
-    height: 890vh;
-  }
-
   .page3 .work_main {
     flex-direction: column;
     height: 70vh;
@@ -714,16 +709,7 @@ nav .circle a {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .page3 .page-background {
-    height: 830vh;
-  }
-}
-
 @media screen and (max-width: 424px) {
-  .page3 .page-background {
-    height: 780vh;
-  }
   .page3 .work_title .init {
     font-size: var(--font-size-md);
   }

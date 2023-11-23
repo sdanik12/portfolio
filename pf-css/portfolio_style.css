@@ -338,6 +338,7 @@ nav .circle a {
   height: 100%;
   position: relative;
 }
+
 .work_main a img{
   width: 100%;
   height: 100%;
@@ -347,6 +348,24 @@ nav .circle a {
   object-position: center;
 }
 
+.visit{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 18px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.visit p{
+  color: #fff;
+}
 .work_main .poster .rt_deco {
   position: absolute;
   width: 50%;
@@ -380,12 +399,16 @@ nav .circle a {
   transition: opacity 0.8s;
 }
 
-.work_main .poster:hover a.link img {
+.work_main .poster:hover a.link img{
   border-radius: 50%;
   position: relative;
   z-index: 1;
 }
-
+.work_main .poster:hover .visit{
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 1;
+}
 .work_main .poster:hover .rt_deco,
 .work_main .poster:hover .lt_deco,
 .work_main .poster:hover .frame {
@@ -656,11 +679,6 @@ nav .circle a {
     right: -5%;
   }
 
-  .work_main .poster img.wave {
-    width: 50%;
-    left: 30%;
-    top: -30%;
-  }
 
   .font p {
     font-size: var(--font-size-lg);

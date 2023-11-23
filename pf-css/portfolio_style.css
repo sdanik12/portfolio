@@ -314,7 +314,9 @@ nav .circle a {
   padding: 10%;
   box-sizing: border-box;
 }
-
+.section:not(:nth-child(1)) .work_title{
+  padding-top: 40%;
+}
 .work_title .init {
   display: inline-block;
   font-size: var(--font-size-xl);
@@ -325,32 +327,24 @@ nav .circle a {
 }
 
 .work_main {
-  width: 90%;
+  width: 20%;
   height: 40vh;
-  margin-top: -8%;
-  margin-left: 17%;
   display: flex;
   justify-content: space-around;
 }
 
 .work_main .poster {
-  width: 20%;
+  width: 100%;
   height: 100%;
   position: relative;
 }
-
-.work_main a.link {
-  display: block;
+.work_main a img{
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   border-radius: 18px;
   transition: 0.3s;
-}
-
-.work_main a.sw19 {
-  background-image: url(../images/sw19_main.jpg);
+  object-fit: cover;
+  object-position: center;
 }
 
 .work_main .poster .rt_deco {
@@ -386,7 +380,7 @@ nav .circle a {
   transition: opacity 0.8s;
 }
 
-.work_main .poster:hover a.link {
+.work_main .poster:hover a.link img {
   border-radius: 50%;
   position: relative;
   z-index: 1;
@@ -398,19 +392,6 @@ nav .circle a {
   opacity: 1;
 }
 
-.work_main .video {
-  right: 0;
-  bottom: 0;
-  width: 70%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.work_main .video video {
-  width: 100%;
-}
-
 .container .section {
   padding: 9% 0 7% 10%;
   font-size: var(--font-size-sm);
@@ -419,7 +400,7 @@ nav .circle a {
   box-sizing: border-box;
 }
 
-.section:first-of-type {
+.section:first-of-type{
   display: flex;
   justify-content: space-between;
 }
@@ -509,35 +490,6 @@ nav .circle a {
 /* -----------------------------------kopri start------------------------------- */
 .container .section-kopri {
   padding-top: 30%;
-}
-
-.work_main a.kopri {
-  background-image: url(../images/kopri_main.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 2s;
-}
-
-.work_main .poster img.wave {
-  transform: rotate(0deg);
-  width: 100%;
-  left: -350%;
-  top: 10%;
-}
-
-.work_main .poster:hover a.kopri {
-  border-radius: 18px;
-  width: 900px;
-}
-
-.work_main .poster:hover img.wave {
-  animation: left-slide 2s forwards;
-}
-
-@keyframes left-slide {
-  to {
-    left: 40%;
-  }
 }
 
 @font-face {
@@ -681,10 +633,7 @@ nav .circle a {
     height: 100%;
   }
 
-  .page3 .work_main .video {
-    width: 100%;
-    height: 25%;
-  }
+ 
 
   .work_main .poster .lt_deco,
   .work_main .poster .rt_deco,

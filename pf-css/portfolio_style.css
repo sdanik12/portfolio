@@ -28,6 +28,10 @@ body {
   font-size: var(--font-size-sm);
 }
 
+body>div{
+  width: 100%;
+  overflow: hidden;
+}
 /* ---------------------------------------------page1시작--------------------------------------- */
 .page1 {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
@@ -41,7 +45,7 @@ body {
 .square {
   position: relative;
   margin: 0 auto;
-  top: 80px;
+  top: 30px;
   width: 150px;
   height: 150px;
 }
@@ -122,8 +126,9 @@ body {
 .page1 .text {
   position: relative;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  transform: translateY(-40%);
+  margin-bottom: 20%;
 }
 
 .page1 .text .txt-hidden {
@@ -175,9 +180,6 @@ body {
 }
 
 /* ---------------------------------------page2시작------------------------------------------------ */
-.page2 {
-  width: 100%;
-}
 
 .page2 .page-color {
   background: linear-gradient(to bottom, #b3def9 0%, #fff9c5 100%);
@@ -288,9 +290,6 @@ nav .circle a {
 }
 
 /* ---------------------------------------page3시작------------------------------------------------- */
-.page3 {
-  width: 100%;
-}
 
 .page3 .page-background {
   left: 0;
@@ -556,15 +555,25 @@ nav .circle a {
 .font .kopri-en p {
   font-family: "Noto Sans KR", sans-serif;
 }
-/* ----------------------------------------------------contact page------------------------------------------------- */
-.contact-page {
-  box-sizing: border-box;
+/* ----------------------------------------------------page4 contact page------------------------------------------------- */
+.page4{
   height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #89cb89 0%,
+    #52fbaf 100%
+  );
+}
+
+.contact-page {
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
+  justify-content: space-around;
 }
+
 .contact {
   padding-top: 15%;
 }
@@ -574,9 +583,9 @@ nav .circle a {
 }
 
 .contact-line {
+  padding-top: 5%;
   width: 100%;
   display: flex;
-  padding: 10% 0;
 }
 
 .contact-line > div {

@@ -8,9 +8,9 @@ $(document).ready(function () {
     let scroll = $(this).scrollTop();
     console.log(scroll);
 
-    if (scroll <= 800) {
+    if (scroll <= 600) {
       $("nav").css("visibility", "hidden");
-    } else if (scroll > 800 && scroll <= 2028) {
+    } else if (scroll > 600 && scroll <= 2028) {
       $("nav").css("visibility", "visible");
     } else {
       $("nav").css("visibility", "visible");

@@ -83,8 +83,7 @@ em {
 .top_layout header .menu ul li a.on {
   -webkit-text-decoration: underline 4px;
           text-decoration: underline 4px;
-  -webkit-text-decoration-color: rgb(0, 180, 219);
-          text-decoration-color: rgb(0, 180, 219);
+  text-decoration-color: rgb(0, 180, 219);
 }
 .top_layout header .menu ul li a:hover {
   color: #009ecd;
@@ -474,7 +473,7 @@ em {
   background-image: url(../images/employment.jpg);
 }
 .body_layout .cont2 .layout ul li.n6 .thumb {
-  background-image: url(../images/lab.jpg);
+  background-image: url(../images/labs.jpg);
 }
 .body_layout .cont2 .layout ul li.n7 .thumb {
   background-image: url(../images/img7.jpg);

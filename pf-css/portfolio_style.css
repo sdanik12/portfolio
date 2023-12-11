@@ -39,7 +39,7 @@ body>div{
 
 .page-color {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .square {
@@ -288,7 +288,9 @@ nav .circle a {
   border-radius: 18px;
   border: 1px solid #000;
 }
-
+.inner h1{
+  font-size: var(--font-size-md);
+}
 /* ---------------------------------------page3시작------------------------------------------------- */
 
 .page3 .page-background {
@@ -646,39 +648,15 @@ nav .circle a {
     height: 70vh;
   }
 
-  .page3 .work_main .poster {
-    width: 100%;
-    height: 50%;
-  }
-
-  .page3 .work_main a.sw19 {
-    width: 100%;
-    height: 100%;
-  }
-
- 
-
   .work_main .poster .lt_deco,
   .work_main .poster .rt_deco,
   .work_main .poster .frame {
-    opacity: 1;
-    width: 18%;
+   display: none;
   }
 
-  .work_main .poster .frame {
-    display: none;
+  .work_main{
+    width: 100%;
   }
-
-  .work_main .poster .lt_deco {
-    top: -15%;
-    left: -5%;
-  }
-
-  .work_main .poster .rt_deco {
-    top: 55%;
-    right: -5%;
-  }
-
 
   .font p {
     font-size: var(--font-size-lg);

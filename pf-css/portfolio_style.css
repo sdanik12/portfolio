@@ -32,16 +32,27 @@ body>div{
   width: 100%;
   overflow: hidden;
 }
-/* ---------------------------------------------page1시작--------------------------------------- */
-.page1 {
-  font-family: "Montserrat", "Noto Sans KR", sans-serif;
-}
 
 .page-color {
   width: 100%;
-  /* height: 100vh; */
+}
+/* ---------------------------------------------page1시작--------------------------------------- */
+.page1 {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  position: relative;height: 100vh;
 }
 
+.page1 .page-color {
+  background-image: linear-gradient(
+    180deg,
+    #52fbaf 0%,
+    #52b6fc 50%,
+    #b3def9 100%
+  );
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
 .square {
   position: relative;
   margin: 0 auto;
@@ -114,14 +125,6 @@ body>div{
   visibility: visible;
 }
 
-.page1 .page-color {
-  background-image: linear-gradient(
-    180deg,
-    #52fbaf 0%,
-    #52b6fc 50%,
-    #b3def9 100%
-  );
-}
 
 .page1 .text {
   position: relative;
@@ -290,6 +293,43 @@ nav .circle a {
 }
 .inner h1{
   font-size: var(--font-size-md);
+  padding-bottom: 5%;
+}
+
+.inner .typo-box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inner .typo-box div{
+  width: 50%;
+  padding:1% 1% 0 0;
+  box-sizing: border-box;
+}
+
+.inner .typo-box div h3{
+  color: #00797b;
+  padding-bottom: 2%;
+}
+.inner div ul li{
+  font-size: var(--font-size-xs);
+  padding-bottom: 1%;
+}
+.inner div ul li span{
+  color: #00797b;
+  font-weight: bold;
+  font-size: var(--font-size-xs);
+  display: inline-block;
+  width: 30%;
+}
+.inner div ul.skills li{
+  display: inline-block;
+  background: #fffdc7;
+  width: 20%;
+  border-radius: 10px;
+  color:#00797b;
+  text-align: center;
+  font-weight: 500;
 }
 /* ---------------------------------------page3시작------------------------------------------------- */
 
